@@ -113,6 +113,20 @@ module.exports = function (grunt) {
         }
       }
     },
+	recess: {
+		options: {
+		compile: true
+		},
+		dist: {
+			files: [{
+				expand: true,
+				cwd: '<%= yeoman.app %>/styles',
+				src: '{,*/}*.less',
+				dest: '.tmp/styles/generated',
+				ext: '.css'
+			}]
+		}
+	},
 
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
@@ -395,6 +409,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer:server',
+      'recess',
       'connect:livereload',
       'watch'
     ]);
@@ -410,6 +425,7 @@ module.exports = function (grunt) {
     'wiredep',
     'concurrent:test',
     'autoprefixer',
+    'recess',
     'connect:test',
     'karma'
   ]);
@@ -420,6 +436,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
+    'recess',
     'concat',
     'ngAnnotate',
     'copy:dist',
