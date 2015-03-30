@@ -1,5 +1,13 @@
-<div class="row">
-    <ul ng-repeat="item in items">
-    	<li>{{item}}</li>
-    </ul>
+<div class="row reddit">
+	<div class="search">
+		<input type="text" placeholder="Seach..." ng-model="search.title" ng-model-options="{debounce: 750}">
+	</div>
+	<div class="results">
+		<div class="fx-fade-normal fx-speed-600" ng-repeat="post in posts | filter:search:{$:'text'}">
+			<div class="post">
+				<a href={{post.url}}>
+				<span>{{post.title}}</span></a>
+			</div>
+		</div>
+	</div>
 </div>

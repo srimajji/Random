@@ -13,39 +13,17 @@
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
-	<link rel="stylesheet" href="styles/generated/main.css">
+	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 </head>
 
-<body ng-app="a1App">
+<body ng-app="a1App" class="main">
 	<!--[if lt IE 7]>
 	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 	<!-- Add your site or application content here -->
 	<header class="header">
-		<nav class="navbar">
-			<ul class="navbar-list">
-				<li class="navbar-item"><a href="#">Home</a></li>
-				<li class="navbar-item"><a href="#">About</a></li>
-			</ul>
-		</nav>
-		<!--<div class="navbar navbar-default" role="navigation">
-		<div class="container">
-		  <div class="navbar-header">
-`
-			<a class="navbar-brand" href="#/">a1</a>
-		  </div>
-
-		  <div class="collapse">
-
-			<ul class="nav navbar-nav">
-			  <li class="active"><a href="#/">Home</a></li>
-			  <li><a ng-href="#/about">About</a></li>
-			  <li><a ng-href="#/">Contact</a></li>
-			</ul>
-		  </div>
-		</div>
-	  </div>!-->
+		<title>Reddit Search</title>
 	</header>
 	<article class="container">
 		<div ng-view=""></div>
@@ -74,6 +52,8 @@
 	<script src="bower_components/angular-messages/angular-messages.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+	<script src="bower_components/ngFx/dist/ngFx.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -81,6 +61,7 @@
 	<script src="scripts/core/core.module.js"></script>
 	<script src="scripts/reddit/reddit.module.js"></script>
 	<script src="scripts/reddit/reddit.controller.js"></script>
+	<script src="scripts/reddit/reddit.service.js"></script>
 	<script src="scripts/reddit/config.route.js"></script>
 	<!-- endbuild -->
 </body>

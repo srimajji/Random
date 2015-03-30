@@ -5,6 +5,7 @@
 		'ngAnimate',
 		'ngMessages',
 		'ngResource',
-		'ngRoute'
+		'ngRoute',
+		'ngFx'
 	]);
 })();
